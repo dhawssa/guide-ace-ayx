@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 杂志专题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #faf7f2;
+      font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+      color: #2e2b26;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #fffcf8;
+      padding: 2.5rem 2.8rem 3rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      border-radius: 20px;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 2rem 1.2rem;
+      }
+    }
+
+    /* hero 区域 */
+    .hero {
+      text-align: center;
+      padding: 2.8rem 0 2.2rem;
+      border-bottom: 1px solid #e7dfd5;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-weight: 400;
+      font-size: 2.6rem;
+      letter-spacing: 2px;
+      color: #3f3a34;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-style: italic;
+      color: #8b8074;
+      font-size: 1.05rem;
+      border-top: 1px dashed #dcd2c6;
+      display: inline-block;
+      padding-top: 0.5rem;
+    }
+
+    /* 引言框 */
+    .pull-quote {
+      background: #f3efe9;
+      border-left: 6px solid #b8a694;
+      padding: 1.2rem 1.8rem;
+      margin: 2rem 0 2.2rem;
+      border-radius: 0 12px 12px 0;
+      font-size: 1.05rem;
+      color: #4e4841;
+    }
+
+    .pull-quote strong {
+      color: #2e2b26;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.7rem;
+      margin: 2.2rem 0 1rem;
+      color: #4f4942;
+      border-bottom: 1px solid #ede5db;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin: 1.8rem 0 0.6rem;
+      color: #5f554b;
+    }
+
+    p {
+      margin: 0 0 1.2rem;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .info-card {
+      background: #f6f2eb;
+      padding: 1.2rem 1.8rem;
+      border-radius: 14px;
+      margin: 1.8rem 0;
+      border: 1px solid #e4dbd0;
+    }
+
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-block {
+      background: #fcf9f5;
+      border: 1px solid #e1d7cb;
+      border-radius: 16px;
+      padding: 1.4rem 1.8rem;
+      margin: 2.2rem 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #3f3a34;
+    }
+
+    .faq-a {
+      color: #5f554b;
+      margin-top: 0.2rem;
+      padding-left: 0.8rem;
+      border-left: 3px solid #cfc3b4;
+    }
+
+    .site-footer {
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e7dfd5;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #736b62;
+    }
+
+    a {
+      color: #7f6b58;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #3f3228;
+    }
+
+    .inline-link {
+      font-weight: 500;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.6rem 0 0.8rem;
+    }
+
+    .feature-item {
+      flex: 1 1 180px;
+      background: #f9f5ef;
+      padding: 1rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid #e5ddd2;
+    }
+
+    .feature-item h4 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+      color: #3f3a34;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .pull-quote {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 横幅 -->
+  <div class="hero">
+    <h1>爱游戏</h1>
+    <div class="sub">一份关于站点与内容的温和叙述</div>
+  </div>
+
+  <!-- 背景说明 -->
+  <div class="pull-quote">
+    <strong>关于这个站点</strong> —— 一个以游戏内容为线索的线上空间，从资讯到社区氛围，尝试为同好提供有温度的阅读体验。<a href="https://ace-ayx.com.cn">爱游戏</a> 并非宏大叙事，而是日常陪伴式的存在。
+  </div>
+
+  <p>
+    在信息流快速更迭的今天，能够安静下来梳理一份关于游戏的介绍并不容易。<strong>爱游戏</strong> 这一名称背后，是一个试图平衡内容深度与可读性的项目。站点内容覆盖常见品类，但更注重分享视角的真诚感，而不是追逐热点或数据。
+  </p>
+
+  <h2>从站点本身说起</h2>
+  <p>
+    无论你是偶然路过，或是带着好奇翻阅，这里都希望提供一种相对纯粹的信息环境。没有弹窗干扰，没有夸张标语，只有围绕游戏生态展开的文章、观察和讨论。团队的初衷是让每个句子都经得起推敲，每一篇更新都保留适度的余白。
+  </p>
+
+  <!-- 三段自然介绍（杂志式） -->
+  <h3>内容脉络 · 不只是列表</h3>
+  <div class="feature-grid">
+    <div class="feature-item">
+      <h4>视角</h4>
+      <p>从开发故事到玩家体验，不堆砌术语，用平实语言还原游戏本来的乐趣。</p>
+    </div>
+    <div class="feature-item">
+      <h4>选材</h4>
+      <p>关注独立作品与经典系列，也留意类型创新，避免千篇一律的测评模板。</p>
+    </div>
+    <div class="feature-item">
+      <h4>氛围</h4>
+      <p>鼓励理性讨论，尊重不同偏好，社区互动以分享感受为主而非胜负比较。</p>
+    </div>
+  </div>
+
+  <p>
+    在内容组织上，<a href="https://ace-ayx.com.cn">爱游戏</a> 倾向于采用专题式编排。例如围绕某一类型或主题，集中呈现多篇相关短文，帮助读者形成整体印象。每一期专题都经过筛选，不追求数量，更看重信息之间的自然衔接。
+  </p>
+
+  <div class="info-card">
+    <p>📌 站点目前以静态页面为主，结构清晰，便于浏览。未来会逐步增加读者互动板块，但始终将阅读流畅度放在首位。所有内容均经过人工整理与核对，不自动采集或拼接信息。</p>
+  </div>
+
+  <h3>可信与边界</h3>
+  <p>
+    关于可靠性，<strong>爱游戏</strong> 坚持署名来源与事实核查。每篇文章末尾会标注参考信息或数据出处，遇到主观评价也会明确标注立场。不虚构体验，不抄袭文案，也不为了流量而制造对立话题。这是一个很朴素的准则，但执行起来需要耐心。
+  </p>
+
+  <p>
+    如果你对某款游戏有自己的看法，也欢迎通过站内渠道交流（目前以邮件形式）。编辑团队会定期整理来信，并在后续内容中回应有代表性的观点。这种互动方式虽然慢，但更接近传统杂志的质感。
+  </p>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-block">
+    <div class="faq-item">
+      <div class="faq-q">Q: 站点更新频率如何？</div>
+      <div class="faq-a">A: 每月 6–10 篇原创短文或专题，不固定日期，但保持节奏稳定。重大作品发布时会临时增补内容。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: 内容是否支持转载？</div>
+      <div class="faq-a">A: 保留版权，非商业转载需注明作者及链接 <a href="https://ace-ayx.com.cn">爱游戏</a>。商业合作请通过邮件沟通。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: 如何判断文章可信度？</div>
+      <div class="faq-a">A: 每篇文章末尾会列出参考源（如开发日志、访谈、实际游玩记录）。编辑团队对存疑信息会额外标注。</div>
+    </div>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="site-footer">
+    <p>如需了解更多内容，可前往 <a href="https://ace-ayx.com.cn">爱游戏</a> 浏览完整文章列表。页面设计模仿传统杂志排版，意在放缓阅读节奏。感谢你的耐心翻阅。</p>
+    <p style="margin-top: 0.8rem; font-size: 0.85rem; color: #9f9488;">—— 本页仅作为站点介绍，所有内容力求客观温和 ——</p>
+  </div>
+
+</div>
+</body>
+</html>
