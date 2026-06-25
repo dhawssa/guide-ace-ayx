@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>买球站 · 知识库入口 · 网站用途速查</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f0e8;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2e2a24;
+            padding: 2rem 1.2rem;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #fcf9f4;
+            border-radius: 28px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            padding: 2.4rem 2.8rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .container {
+                padding: 1.6rem 1.2rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* 标题体系 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border-left: 6px solid #b58b6b;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+            color: #2f2620;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-top: 2.4rem;
+            margin-bottom: 0.8rem;
+            color: #3f322a;
+            border-bottom: 1px solid #e2d6c8;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 1.6rem;
+            margin-bottom: 0.3rem;
+            color: #4f3e33;
+        }
+
+        /* 段落与内联 */
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #7f5f49;
+            text-decoration: none;
+            border-bottom: 1px solid #ccb9a8;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #4e372a;
+            border-bottom-color: #7f5f49;
+        }
+
+        /* 引用块 / 提示框 — 本次做成双用途 */
+        .info-card {
+            background-color: #efe8dd;
+            border-left: 5px solid #b58b6b;
+            padding: 1rem 1.5rem;
+            margin: 1.6rem 0;
+            border-radius: 0 14px 14px 0;
+            font-size: 0.95rem;
+        }
+
+        .tip-box {
+            background-color: #eae2d4;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.2rem 0;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+            border: 1px solid #d6c9b8;
+        }
+
+        .tip-box strong {
+            color: #4f3726;
+        }
+
+        /* 目录风格网格 —— 知识库入口感 */
+        .dir-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 1.2rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        .dir-item {
+            background: #f7f1e7;
+            padding: 1rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid #e3d6c6;
+            transition: background 0.2s;
+        }
+
+        .dir-item:hover {
+            background: #efe6d8;
+        }
+
+        .dir-item .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: #d4c3b0;
+            color: #2f2620;
+            padding: 0.1rem 0.7rem;
+            border-radius: 40px;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.3rem;
+        }
+
+        .dir-item h4 {
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+            color: #2e241e;
+        }
+
+        .dir-item p {
+            font-size: 0.85rem;
+            color: #51443b;
+            margin-bottom: 0;
+        }
+
+        /* 相关信息区 — 简表风格 */
+        .rel-table {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.6rem;
+            margin: 0.4rem 0 1.2rem;
+            padding: 0.4rem 0;
+        }
+
+        .rel-item {
+            font-size: 0.9rem;
+            background: transparent;
+            border-bottom: 1px dashed #d6c6b4;
+            padding-bottom: 0.15rem;
+        }
+
+        .rel-item span {
+            font-weight: 600;
+            color: #4e3b2e;
+            margin-right: 0.2rem;
+        }
+
+        /* 场景小列表 */
+        .scene-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .scene-list li {
+            padding: 0.35rem 0 0.35rem 1.4rem;
+            position: relative;
+            margin-bottom: 0.2rem;
+        }
+
+        .scene-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #9a806b;
+            font-weight: bold;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            margin: 1.8rem 0 0.6rem;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            margin-top: 0.8rem;
+            margin-bottom: 0.1rem;
+            color: #3f2f24;
+        }
+
+        .faq-a {
+            margin-left: 0.6rem;
+            font-size: 0.95rem;
+            color: #3e352d;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e6dbce;
+            margin: 1.8rem 0 1rem;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: #6b5d50;
+            margin-top: 2rem;
+            border-top: 1px solid #e8dfd2;
+            padding-top: 1rem;
+            text-align: right;
+        }
+
+        .inline-link-wrap {
+            background: #f2eadf;
+            padding: 0.1rem 0.5rem;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>买球站 · 用途速识</h1>
+
+    <p>若你初次接触到 <a href="https://site-cn-maiqiu.com">买球站</a> 这个名称，第一反应可能是“这和体育赛事有什么关系？” 实际上，该站的核心定位围绕体育竞猜资讯与赛事数据参考，属于信息聚合型平台。以下从知识库入口的角度，梳理其内容构成与适用场景，帮助你快速判断是否匹配自身需求。</p>
+
+    <!-- 目录感布局：知识库入口卡片 -->
+    <div class="dir-grid">
+        <div class="dir-item">
+            <div class="tag">数据</div>
+            <h4>盘口与赔率</h4>
+            <p>主流联赛的赔率变动、让球指数及返还率汇总。</p>
+        </div>
+        <div class="dir-item">
+            <div class="tag">资讯</div>
+            <h4>赛前情报</h4>
+            <p>球队近况、伤停名单、交锋心理及场外因素速递。</p>
+        </div>
+        <div class="dir-item">
+            <div class="tag">工具</div>
+            <h4>走势图表</h4>
+            <p>可视化历史数据与实时折线，辅助判断趋势。</p>
+        </div>
+        <div class="dir-item">
+            <div class="tag">社区</div>
+            <h4>观点参考</h4>
+            <p>匿名用户分享的分析思路，非投资建议。</p>
+        </div>
+    </div>
+
+    <!-- 说明区域：网站定位与边界 -->
+    <h2>说明 · 它提供什么</h2>
+    <p><a href="https://site-cn-maiqiu.com">买球站</a> 本身不设投注窗口，也不代理任何博彩业务，而是以信息聚合的角色出现。内容主要包括：各赛事实时赔率对比、赛前简报、历史交锋统计、以及基于公开数据的文字复盘。你可以把它理解为一个体育竞猜领域的“参考书架”，而非交易终端。</p>
+
+    <div class="info-card">
+        <strong>提示：</strong> 站内所有数据均来源于公开体育统计与机构报价，仅供个人学习与观察，不构成任何形式的投注建议或保证。使用前请确认当地法律法规。
+    </div>
+
+    <!-- 提示区：快速识别用途 -->
+    <h2>提示 · 谁适合使用</h2>
+    <p>以下三类用户可能会觉得该站的信息密度对路：</p>
+    <ul class="scene-list">
+        <li><strong>信息型爱好者</strong> —— 喜欢赛前收集赔率走势、对比不同机构态度，以此丰富自己的赛前笔记。</li>
+        <li><strong>复盘研究者</strong> —— 赛后回顾指数变化与赛果的关联，尝试理解市场情绪演变。</li>
+        <li><strong>边缘观察者</strong> —— 不参与实际竞猜，但对体育博弈的数据逻辑与概率模型抱有学术兴趣。</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>📌 一句话提示：</strong> 如果你只是想快速浏览“今晚哪场热度高”或“让球数是否异常”，<a href="https://site-cn-maiqiu.com">买球站</a> 的首页聚合卡片可以提供一目了然的参考。不必注册即可查看大部分内容。
+    </div>
+
+    <!-- 相关信息区：结构化的辅助信息 -->
+    <h2>相关信息</h2>
+    <div class="rel-table">
+        <div class="rel-item"><span>覆盖联赛</span> 英超、西甲、德甲、意甲、法甲、欧冠、亚冠、NBA 等</div>
+        <div class="rel-item"><span>更新频率</span> 赛前 24 小时内滚动更新</div>
+        <div class="rel-item"><span>是否免费</span> 基础数据免费，深度图表需登录</div>
+        <div class="rel-item"><span>内容性质</span> 参考信息，非交易平台</div>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+        <h2>常见疑问 · 摘要</h2>
+
+        <div class="faq-q">Q：该站是官方博彩网站吗？</div>
+        <div class="faq-a">A：不是。它仅呈现赔率变化与赛事数据，不提供投注通道，也不托管资金。</div>
+
+        <div class="faq-q">Q：需要注册才能看内容？</div>
+        <div class="faq-a">A：首页及主要赛前情报无需注册。部分历史对比图表和自定义筛选功能需创建免费账号。</div>
+
+        <div class="faq-q">Q：信息可靠吗？</div>
+        <div class="faq-a">A：数据来源为公开体育统计与机构报价，但无法保证实时性。建议交叉核对多个渠道。</div>
+    </div>
+
+    <!-- 引用块风格收尾 -->
+    <hr>
+    <p style="font-style: italic; color: #4f4136;">
+        “信息型入口的价值在于快速缩小认知盲区，而非代替判断。” 如果你正在寻找一个结构清晰的体育竞猜数据参考点，不妨将 <a href="https://site-cn-maiqiu.com">买球站</a> 加入书签，从今日赛程开始浏览。
+    </p>
+
+    <div class="footer-note">
+        本页为独立介绍 · 仅用作功能说明 · 不引导任何线下行为
+    </div>
+
+</div>
+</body>
+</html>
